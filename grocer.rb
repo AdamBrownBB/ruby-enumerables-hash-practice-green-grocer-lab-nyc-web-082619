@@ -60,6 +60,7 @@ def checkout(cart, coupons)
   w_clearance.each do |item, attribute|
     final_cost += (attribute[:price] * attribute[:count])
   end
-  return  final_cost = (final_cost * 0.9) if final_cost > 100
+  final_cost = (final_cost * 0.9) if final_cost > 100
+  return final_cost
 end
 
